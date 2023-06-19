@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Organic Relief";
+  src: url("/fonts/Organic-Relief.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SugarpunchDemo";
+  src: url("/fonts/SugarpunchDEMO.otf") format("truetype");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000000;
+  font-family: "Roboto Serif", serif;
+  color: white;
+  overflow-x: hidden;
+  /* font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "DM Sans", sans-serif;
+  font-family: "Roboto Slab", serif; */
+}
+
+/* Width and height of the scrollbar track */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Background color of the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #1E1E1E;
+}
+
+/* Color of the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #37373D;
+  border-radius: 5px;
+}
+
+/* On hover, color of the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #3d3d43;
+}
