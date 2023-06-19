@@ -1,13 +1,148 @@
 <template>
   <section id="tech">
     <Container>
-      <div class="min-h-screen bg-zinc-700 my-5 p-5">
-        <h1 class="text-center text-white">Tech</h1>
+      <div class="bg-black my-5 py-20 relative">
+        <div class="w-[40%]">
+          <h2 class="font-['Roboto_Slab']">
+            <span class="block font-black text-2xl">and finally,</span>
+            <span class="block font-black text-9xl">tech.</span>
+            <span class="block font-bold text-xl">
+              In my personal journey, I already worked with some techonologies,
+              and here they are:
+            </span>
+          </h2>
+
+          <div v-for="(el, ind) in skills" :key="ind">
+            <TagCard :el="el" />
+          </div>
+        </div>
+
+        <img
+          width="500"
+          height="600"
+          class="w-[500px] h-[600px] object-cover absolute top-[10%] right-0"
+          src="/icons/bg-cover-4.gif"
+          alt=""
+        />
+
+        <div
+          class="bg-cover-color absolute top-[15%] -right-[50%] w-full h-[60%] bg-white"
+        ></div>
       </div>
     </Container>
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+import axios from "axios";
 
-<style lang="scss" scoped></style>
+const skills = ref([
+  {
+    tag: "Web",
+    skills: [
+      {
+        id: 1,
+        icon: "html",
+        name: "HTML",
+        experience: "+1 year",
+      },
+      {
+        id: 2,
+        icon: "css",
+        name: "CSS",
+        experience: "+1 year",
+      },
+      {
+        id: 3,
+        icon: "js",
+        name: "JavaScript",
+        experience: "+1 year",
+      },
+      {
+        id: 4,
+        icon: "ts",
+        name: "TypeScript",
+        experience: "+1 year",
+      },
+    ],
+  },
+  {
+    tag: "Frameworks",
+    skills: [
+      {
+        id: 1,
+        icon: "nodejs",
+        name: "Node.js",
+        experience: "+1 year",
+      },
+    ],
+  },
+  {
+    tag: "Libraries",
+    skills: [
+      {
+        id: 1,
+        icon: "tailwindcss",
+        name: "TailwindCSS",
+        experience: "+1 year",
+      },
+    ],
+  },
+  {
+    tag: "Data",
+    skills: [
+      {
+        id: 1,
+        icon: "pg",
+        name: "PostgreSQL",
+        experience: "+1 year",
+      },
+    ],
+  },
+]);
+
+const data = reactive({
+  list: [],
+  current: 0,
+});
+
+onMounted(() => {
+  axios
+    .get(`http://localhost:3001/api/project`)
+    .then((res) => {
+      data.list = res.data;
+    })
+    .catch((error) => {
+      const message = error?.response?.data?.message;
+      if (typeof message == "object") {
+        for (let i in message) {
+          setTimeout(() => {
+            ElNotification({
+              title: "Error",
+              message: message[i],
+              type: "warning",
+            });
+          }, i * 200);
+        }
+      } else {
+        ElNotification({
+          title: "Error",
+          message: message,
+          type: "warning",
+        });
+      }
+    });
+});
+</script>
+
+<style lang="scss" scoped>
+.bg-cover-color {
+  background: linear-gradient(
+    180deg,
+    #000000 0%,
+    rgba(74, 25, 112, 0.35) 71.35%,
+    rgba(104, 35, 157, 0) 100%
+  );
+  transform: rotate(79deg);
+}
+</style>

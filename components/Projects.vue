@@ -1,5 +1,5 @@
 <template>
-  <section id="projects" class="section" data-id="home">
+  <section id="projects">
     <Container>
       <div class="bg-black my-5 py-20">
         <h2

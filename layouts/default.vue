@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <main class="min-h-screen bg-black mt-20">
+  <main class="min-h-screen bg-black">
     <slot />
   </main>
   <Footer />

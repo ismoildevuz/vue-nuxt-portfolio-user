@@ -1,24 +1,24 @@
 <template>
   <section id="home">
     <Container>
-      <div class="bg-black my-5 p-5 relative">
+      <div class="bg-black mb-5 pt-24 p-5 relative">
         <img
           width="600"
-          class="absolute -left-[15%]"
+          class="absolute -left-[22%]"
           src="/icons/bg-cover-1.svg"
           alt=""
         />
 
         <img
           width="150"
-          class="absolute top-[55%] left-[10%]"
+          class="absolute top-[55%] left-[5%]"
           src="/icons/bg-cover-2.svg"
           alt=""
         />
 
         <img
           width="500"
-          class="absolute -right-[8%]"
+          class="absolute -right-[12%]"
           src="/icons/bg-cover-3.svg"
           alt=""
         />
