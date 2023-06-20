@@ -26,7 +26,7 @@
           <div
             class="w-min mx-auto my-5 border-2 px-8 p-2 rounded duration-200 text-black bg-white border-white hover:bg-black hover:text-white"
           >
-            <a class="font-['Inter'] font-semibold" href="#contact">Contact</a>
+            <a class="font-['Inter'] font-semibold" href="/#contact">Contact</a>
           </div>
         </div>
       </div>

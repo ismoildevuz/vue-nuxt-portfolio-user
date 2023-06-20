@@ -1,13 +1,12 @@
 <template>
-  <li
-    class="border-2 px-2 p-1 rounded duration-200 border-black hover:border-white"
-  >
+  <li class="border-2 px-2 p-1 rounded duration-200 border-black">
     <a
       :class="path"
-      :href="`#${path}`"
+      :href="`/#${path}`"
       @click="(e) => navigateToSection(e, `#${path}`)"
-      >{{ name }}</a
     >
+      {{ name }}
+    </a>
   </li>
 </template>
 
@@ -17,6 +16,9 @@ defineProps(["name", "path"]);
 const navigateToSection = (e, sectionId) => {
   document.querySelector(".active")?.classList.remove("active");
   e.target.classList.add("active");
+  document
+    .querySelector(`.${useRoute().hash.split("/#")[1]}`)
+    ?.classList.add("active");
   const sectionElement = document.querySelector(sectionId);
   if (sectionElement) {
     const headerHeight = 80;
@@ -28,7 +30,7 @@ const navigateToSection = (e, sectionId) => {
 onMounted(() => {
   document.querySelector(".active")?.classList.remove("active");
   document
-    .querySelector(`.${useRoute().hash.split("#")[1]}`)
+    .querySelector(`.${useRoute().hash.split("/#")[1]}`)
     ?.classList.add("active");
 });
 </script>

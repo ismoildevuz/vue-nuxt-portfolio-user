@@ -13,6 +13,14 @@
             :name="el.name"
             :path="el.path"
           />
+
+          <li
+            class="border-2 px-2 p-1 rounded duration-200 border-black hover:border-white"
+          >
+            <nuxt-link to="blog" @click="(e) => toggleClass(e)">
+              Blog
+            </nuxt-link>
+          </li>
         </ul>
 
         <div class="flex gap-5">
@@ -45,9 +53,15 @@ const navLinks = ref([
     name: "Contact",
     path: "contact",
   },
-  {
-    name: "Blog",
-    path: "blog",
-  },
 ]);
+
+const toggleClass = (e) => {
+  document.querySelector(".active")?.classList.remove("active");
+};
+
+onMounted(() => {
+  document.querySelector(".active")?.classList.remove("active");
+});
 </script>
+
+<style lang="scss" scoped></style>

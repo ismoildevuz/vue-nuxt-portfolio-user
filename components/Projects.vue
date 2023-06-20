@@ -36,8 +36,8 @@
             <div
               v-for="(el, ind) in data.list"
               :key="ind"
-              :class="`w-2 h-2 bg-white opacity-${
-                ind == data.current ? '100' : '70'
+              :class="`w-2 h-2 bg-white ${
+                ind == data.current ? 'opacity-100' : 'opacity-70'
               } rounded-full`"
             ></div>
           </div>
