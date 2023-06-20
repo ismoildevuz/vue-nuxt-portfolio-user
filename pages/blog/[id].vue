@@ -13,9 +13,9 @@
           <span>Back to Blog page</span>
         </nuxt-link>
 
-        <div class="flex justify-between gap-10 mt-5">
-          <div class="flex-grow border border-white rounded-xl">
-            <div class="p-10 border-b border-white">
+        <div class="2xl:flex 2xl:justify-between 2xl:gap-10 mt-5">
+          <div class="flex-grow border border-white rounded-xl overflow-hidden">
+            <div class="p-10 border-b border-white bg-cover-color">
               <div class="flex gap-3">
                 <h4 class="font-['Roboto'] flex items-center gap-2">
                   <Icons name="calendar" color="white" />
@@ -35,7 +35,7 @@
               </div>
 
               <h2
-                class="font-['Roboto_Slab'] font-black text-6xl leading-snug w-[75%] my-2"
+                class="font-['Roboto_Slab'] font-black text-3xl 2xl:text-6xl leading-snug 2xl:w-[75%] mt-5"
               >
                 <span>{{ data.item.title }}</span>
               </h2>
@@ -51,7 +51,7 @@
             </div>
           </div>
 
-          <div class="w-[300px]">
+          <div class="2xl:w-[300px]">
             <RightSide :data="data.list" />
           </div>
         </div>
@@ -134,4 +134,24 @@ onMounted(() => {
 });
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.bg-cover-color {
+  background: linear-gradient(
+    180deg,
+    #000000 -8.29%,
+    rgba(15, 5, 23, 0.65) 75.18%,
+    rgba(74, 25, 112, 0.55) 100%
+  );
+}
+
+@media (min-width: 1536px) {
+  .bg-cover-color {
+    background: linear-gradient(
+      90deg,
+      #000000 0%,
+      rgba(15, 5, 23, 0.65) 77.08%,
+      rgba(74, 25, 112, 0.25) 100%
+    );
+  }
+}
+</style>

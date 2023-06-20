@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full">
+  <div class="w-full mt-5 2xl:mt-0'">
     <div class="border border-white rounded-xl p-5">
       <div class="flex justify-between gap-2">
         <button

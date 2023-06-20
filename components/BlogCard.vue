@@ -8,11 +8,13 @@
           width="100"
           height="100"
           class="w-[100px] h-[100px] object-cover rounde"
-          :src="`http://localhost:3001/api/image/file/${el.image?.file_name}`"
+          :src="`http://192.168.100.48:3001/api/image/file/${el.image?.file_name}`"
           onerror="this.src='/images/no-image-blog.png'"
         />
 
-        <h3 class="text-3xl w-[70%] h-[150px] overflow-hidden relative">
+        <h3
+          class="text-2xl 2xl:text-3xl 2xl:w-[70%] h-[150px] overflow-hidden relative"
+        >
           <span>{{ el.title }}</span>
 
           <div
