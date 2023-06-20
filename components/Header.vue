@@ -1,5 +1,7 @@
 <template>
-  <header class="fixed top-0 z-10 bg-black w-full h-20">
+  <header
+    class="fixed top-0 z-10 bg-white dark:bg-black text-black dark:text-white w-full h-20"
+  >
     <Container class="h-full">
       <nav class="flex justify-between py-5 items-center h-full">
         <nuxt-link to="/" class="font-bold">
@@ -20,14 +22,24 @@
             />
 
             <li
-              class="border-2 px-2 p-1 rounded duration-200 border-black hover:border-white"
+              class="border-2 px-2 p-1 rounded border-white dark:border-black hover:border-black dark:hover:border-white"
             >
               <nuxt-link to="blog"> Blog </nuxt-link>
             </li>
           </ul>
 
           <div class="flex gap-5">
-            <button>
+            <button
+              class="dark:hidden block"
+              @click="colorMode.preference = 'dark'"
+            >
+              <Icons name="dark" />
+            </button>
+
+            <button
+              class="dark:block hidden"
+              @click="colorMode.preference = 'light'"
+            >
               <Icons name="light" />
             </button>
           </div>
@@ -63,7 +75,7 @@
 
           <li
             @click="sideOpen = !sideOpen"
-            class="border-2 px-5 p-2 rounded duration-200 border-black hover:border-white list-none"
+            class="border-2 px-5 p-2 rounded border-black hover:border-white list-none"
           >
             <nuxt-link to="/blog"> Blog </nuxt-link>
           </li>
@@ -98,6 +110,8 @@
 </template>
 
 <script setup>
+const colorMode = useColorMode();
+
 const sideOpen = ref(false);
 
 const logoName = ref(`<>edu.</>`);

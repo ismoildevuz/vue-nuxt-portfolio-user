@@ -1,12 +1,12 @@
 <template>
-  <footer class="bg-black relative">
+  <footer class="bg-white dark:bg-black text-black dark:text-white relative">
     <Container>
       <div class="py-16 2xl:py-5 2xl:flex 2xl:items-center 2xl:justify-between">
         <div class="font-['Roboto_Slab'] text-sm">
           <h6 class="text-center"><span>© 2023 Ismoil Abdurahmonov</span></h6>
         </div>
 
-        <div class="2xl:flex 2xl:items-center gap-10">
+        <div class="2xl:flex 2xl:items-center gap-10 mix-blend-difference">
           <div
             class="w-min mx-auto flex items-center justify-center gap-5 py-10 2xl:py-5"
           >

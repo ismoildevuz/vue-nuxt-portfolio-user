@@ -1,6 +1,6 @@
 <template>
   <div class="flex gap-5">
-    <div>
+    <div class="mix-blend-difference">
       <Icons :name="el.icon" />
     </div>
 
@@ -8,7 +8,7 @@
       <h4 class="text-xl font-bold">
         <span>{{ el.name }}</span>
       </h4>
-      <h4 class="text-[#FFFFFF8C]">
+      <h4 class="text-[#FFFFFF8C] mix-blend-difference">
         <span>{{ el.experience }} experience</span>
       </h4>
     </div>

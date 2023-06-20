@@ -2,9 +2,19 @@
   <div class="2xl:h-[400px] 2xl:flex 2xl:justify-between">
     <div class="font-['Roboto_Slab'] my-5 mr-5">
       <p class="flex gap-2 mb-5">
-        <span><Icons name="finished" /></span>
+        <span class="dark:block hidden"
+          ><Icons name="finished" color="white"
+        /></span>
+        <span class="dark:hidden block"
+          ><Icons name="finished" color="black"
+        /></span>
 
-        <span><Icons name="stick" /></span>
+        <span class="dark:block hidden"
+          ><Icons name="stick" color="white"
+        /></span>
+        <span class="dark:hidden block"
+          ><Icons name="stick" color="black"
+        /></span>
 
         <span>Finished</span>
       </p>
@@ -23,7 +33,7 @@
         <a
           target="_blank"
           :href="el.link_project"
-          class="font-['DM_Sans'] font-bold py-3 px-10 bg-[#346259] rounded-lg"
+          class="font-['DM_Sans'] font-bold py-3 px-10 bg-[#346259] rounded-lg text-white"
         >
           VISIT APP WEBSITE
         </a>
@@ -31,7 +41,7 @@
         <a
           target="_blank"
           :href="el.link_github"
-          class="bg-white w-10 h-10 flex items-center justify-center rounded-full overflow-hidden"
+          class="bg-white w-10 h-10 flex items-center justify-center rounded-full overflow-hidden border border-black"
         >
           <Icons name="github" />
         </a>

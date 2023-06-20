@@ -1,15 +1,19 @@
 <template>
   <section v-if="data.list.length" id="projects">
     <Container>
-      <div class="bg-black my-5 py-20">
+      <div class="my-5 py-20">
         <h2
-          class="text-center text-white text-3xl font-black font-['Roboto_Slab'] border-b-2 w-min mx-auto p-2"
+          class="text-center text-3xl font-black font-['Roboto_Slab'] border-b-2 border-black dark:border-white w-min mx-auto p-2"
         >
           Projects
         </h2>
 
-        <div class="project-item my-10 2xl:px-20">
-          <div class="carousel overflow-hidden">
+        <div class="my-10 2xl:px-20 relative">
+          <div
+            class="hidden dark:block bg-cover-color -left-0 absolute w-full h-full bg-transparent"
+          ></div>
+
+          <div class="carousel overflow-hidden relative">
             <div
               class="carousel-inner flex duration-300 transition-transform ease-in-out"
             >
@@ -24,10 +28,12 @@
           </div>
         </div>
 
-        <div class="flex items-center justify-center gap-10">
+        <div
+          class="flex items-center justify-center gap-10 mix-blend-difference"
+        >
           <button
             @click="prev"
-            class="carousel-prev rounded-full hover:bg-slate-800"
+            class="carousel-prev rounded-full hover:bg-white hover:bg-opacity-20"
           >
             <Icons name="arrow_left" />
           </button>
@@ -44,7 +50,7 @@
 
           <button
             @click="next"
-            class="carousel-next rounded-full hover:bg-slate-800"
+            class="carousel-next rounded-full hover:bg-white hover:bg-opacity-20"
           >
             <Icons name="arrow_right" />
           </button>
@@ -112,7 +118,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 @media (min-width: 1536px) {
-  .project-item {
+  .bg-cover-color {
     background: linear-gradient(
       90deg,
       rgba(52, 98, 89, 0.65) 0%,

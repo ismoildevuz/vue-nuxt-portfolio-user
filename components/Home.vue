@@ -1,7 +1,7 @@
 <template>
   <section id="home">
     <Container>
-      <div class="bg-black mb-5 pt-24 p-5 relative">
+      <div class="mb-5 pt-24 p-5 relative">
         <div class="mx-auto text-center py-12">
           <h1 class="font-['SugarpunchDemo']">
             <span class="block text-xl 2xl:text-2xl">HI, I'M</span>
@@ -20,13 +20,13 @@
           </h2>
 
           <div
-            class="w-min mx-auto my-5 border-2 px-8 p-2 rounded duration-200 text-black bg-white border-white hover:bg-black hover:text-white"
+            class=" mix-blend-difference w-min mx-auto my-5 border-2 px-8 p-2 rounded duration-200 text-black bg-white border-white hover:bg-black hover:text-white"
           >
             <a class="font-['Inter'] font-semibold" href="#contact">Contact</a>
           </div>
 
           <div
-            class="w-min mx-auto flex items-center justify-center gap-5 py-5"
+            class="w-min mx-auto flex items-center justify-center gap-5 py-5 mix-blend-difference"
           >
             <a target="_blank" href="#" class="">
               <Icons name="email" />
@@ -41,7 +41,7 @@
             </a>
           </div>
 
-          <div class="w-min mx-auto mt-14 hidden 2xl:block">
+          <div class="w-min mx-auto mt-14 hidden 2xl:block  mix-blend-difference">
             <div class="mb-5">
               <Icons name="mouse" />
             </div>
@@ -54,7 +54,7 @@
 
         <img
           width="600"
-          class="relative 2xl:absolute scale-150 mt-32 2xl:mt-0 2xl:scale-100 top-10 -left-40 2xl:top-[12%] 2xl:-left-[22%]"
+          class="relative 2xl:absolute scale-150 mt-32 2xl:mt-0 2xl:scale-100 top-10 -left-40 2xl:top-[12%] 2xl:-left-[22%] mix-blend-difference"
           src="/icons/bg-cover-1.svg"
           alt=""
         />
@@ -68,7 +68,7 @@
 
         <img
           width="500"
-          class="relative 2xl:absolute scale-150 2xl:scale-100 -right-48 2xl:top-[12%] 2xl:-right-[12%]"
+          class="relative 2xl:absolute scale-150 2xl:scale-100 -right-48 2xl:top-[12%] 2xl:-right-[12%] mix-blend-difference"
           src="/icons/bg-cover-3.svg"
           alt=""
         />
