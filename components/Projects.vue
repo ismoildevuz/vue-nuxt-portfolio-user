@@ -8,7 +8,7 @@
           Projects
         </h2>
 
-        <div class="project-item my-10 px-20">
+        <div class="project-item my-10 2xl:px-20">
           <div class="carousel overflow-hidden">
             <div
               class="carousel-inner flex duration-300 transition-transform ease-in-out"
@@ -83,7 +83,7 @@ const next = () => {
 
 onMounted(() => {
   axios
-    .get(`http://localhost:3001/api/project`)
+    .get(`http://192.168.100.48:3001/api/project`)
     .then((res) => {
       data.list = res.data;
     })
@@ -111,12 +111,14 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-.project-item {
-  background: linear-gradient(
-    90deg,
-    rgba(52, 98, 89, 0.65) 0%,
-    rgba(52, 98, 89, 0.25) 20%,
-    rgba(52, 98, 89, 0) 100%
-  );
+@media (min-width: 1536px) {
+  .project-item {
+    background: linear-gradient(
+      90deg,
+      rgba(52, 98, 89, 0.65) 0%,
+      rgba(52, 98, 89, 0.25) 20%,
+      rgba(52, 98, 89, 0) 100%
+    );
+  }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[400px] flex justify-between">
+  <div class="2xl:h-[400px] 2xl:flex 2xl:justify-between">
     <div class="font-['Roboto_Slab'] my-5 mr-5">
       <p class="flex gap-2 mb-5">
         <span><Icons name="finished" /></span>
@@ -24,8 +24,9 @@
           target="_blank"
           :href="el.link_project"
           class="font-['DM_Sans'] font-bold py-3 px-10 bg-[#346259] rounded-lg"
-          >VISIT APP WEBSITE</a
         >
+          VISIT APP WEBSITE
+        </a>
 
         <a
           target="_blank"
@@ -38,10 +39,10 @@
     </div>
 
     <img
-      class="rounded-lg w-[600px] h-[400px] object-cover select-none"
+      class="rounded-lg w-[360px] h-[240px] 2xl:w-[600px] 2xl:h-[400px] object-cover select-none"
       height="400"
       width="600"
-      :src="`http://localhost:3001/api/image/file/${el.image?.file_name}`"
+      :src="`http://192.168.100.48:3001/api/image/file/${el.image?.file_name}`"
       onerror="this.src='/images/project-1.png'"
       alt=""
     />

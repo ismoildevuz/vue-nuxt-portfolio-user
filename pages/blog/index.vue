@@ -53,7 +53,7 @@ const data = reactive({
 
 onMounted(() => {
   axios
-    .get(`http://localhost:3001/api/blog`)
+    .get(`http://192.168.100.48:3001/api/blog`)
     .then((res) => {
       data.list = res.data;
     })

@@ -4,21 +4,21 @@
       <div class="my-5 p-5 relative">
         <img
           width="1100"
-          class="absolute -top-[40%] -left-[15%]"
+          class="absolute scale-[4] 2xl:scale-100 top-24 2xl:-top-[40%] -left-[15%]"
           src="/icons/bg-cover-5.svg"
           alt=""
         />
 
         <img
           width="650"
-          class="absolute -top-[40%] -right-[27%]"
+          class="hidden 2xl:block absolute -top-[40%] -right-[27%]"
           src="/icons/bg-cover-6.svg"
           alt=""
         />
 
         <div class="w-[80%] relative">
           <h2
-            class="font-['Organic_Relief'] text-5xl leading-[100px] mix-blend-difference"
+            class="font-['Organic_Relief'] text-3xl 2xl:text-5xl leading-loose 2xl:leading-[100px] mix-blend-difference"
           >
             <span> WANT TO HAVE AN AWESOME PROJECT DONE? </span>
           </h2>

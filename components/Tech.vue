@@ -2,7 +2,7 @@
   <section id="tech">
     <Container>
       <div class="bg-black my-5 py-20 relative">
-        <div class="w-[40%]">
+        <div class="2xl:w-[40%]">
           <h2 class="font-['Roboto_Slab']">
             <span class="block font-black text-2xl">and finally,</span>
             <span class="block font-black text-9xl">tech.</span>
@@ -20,13 +20,13 @@
         <img
           width="500"
           height="600"
-          class="w-[500px] h-[600px] object-cover absolute top-[10%] right-0"
+          class="hidden 2xl:block w-[500px] h-[600px] object-cover absolute top-[10%] right-0"
           src="/icons/bg-cover-4.gif"
           alt=""
         />
 
         <div
-          class="bg-cover-color absolute top-[15%] -right-[50%] w-full h-[60%] bg-white"
+          class="hidden 2xl:block bg-cover-color absolute top-[15%] -right-[50%] w-full h-[60%] bg-white"
         ></div>
       </div>
     </Container>

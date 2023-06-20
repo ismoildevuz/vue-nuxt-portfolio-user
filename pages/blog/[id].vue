@@ -78,7 +78,7 @@ const data = reactive({
 
 onMounted(() => {
   axios
-    .get(`http://localhost:3001/api/blog/${id}`)
+    .get(`http://192.168.100.48:3001/api/blog/${id}`)
     .then((res) => {
       data.item = res.data;
       data.loaded = true;
@@ -107,7 +107,7 @@ onMounted(() => {
     });
 
   axios
-    .get(`http://localhost:3001/api/blog`)
+    .get(`http://192.168.100.48:3001/api/blog`)
     .then((res) => {
       data.list = res.data;
     })
