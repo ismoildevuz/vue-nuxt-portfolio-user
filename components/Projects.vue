@@ -1,5 +1,5 @@
 <template>
-  <section id="projects">
+  <section v-if="data.list.length" id="projects">
     <Container>
       <div class="bg-black my-5 py-20">
         <h2
