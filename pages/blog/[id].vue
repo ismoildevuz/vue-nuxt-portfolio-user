@@ -1,34 +1,53 @@
 <template>
   <section v-if="data.loaded && data.item" id="blog">
     <Container>
-      <div class="bg-black my-5 py-20">
+      <div class="mt-5 py-20">
         <h1
-          class="font-['Roboto_Slab'] text-center text-3xl border-b-2 w-min mx-auto py-2 font-black"
+          class="font-['Roboto_Slab'] text-center text-3xl border-b-2 border-black dark:border-white w-min mx-auto py-2 font-black"
         >
           <span>Blog</span>
         </h1>
 
-        <nuxt-link to="/blog" class="mt-10 flex items-center gap-3">
+        <nuxt-link
+          to="/blog"
+          class="mt-10 flex items-center gap-3 text-white mix-blend-difference"
+        >
           <Icons name="to_back" />
           <span>Back to Blog page</span>
         </nuxt-link>
 
         <div class="2xl:flex 2xl:justify-between 2xl:gap-10 mt-5">
-          <div class="flex-grow border border-white rounded-xl overflow-hidden">
-            <div class="p-10 border-b border-white bg-cover-color">
+          <div
+            class="flex-grow border border-black dark:border-white rounded-xl overflow-hidden"
+          >
+            <div
+              class="p-10 border-b border-black dark:border-white dark:bg-gradient-to-t dark:2xl:bg-gradient-to-l dark:from-[rgba(114,39,176,0.25)] dark:from-0% dark:to-transparent"
+            >
               <div class="flex gap-3">
                 <h4 class="font-['Roboto'] flex items-center gap-2">
-                  <Icons name="calendar" color="white" />
+                  <Icons
+                    class="mix-blend-difference"
+                    name="calendar"
+                    color="white"
+                  />
 
                   <span>
                     {{ moment(data.item.createdAt).format("DD/MM/YYYY") }}
                   </span>
                 </h4>
 
-                <Icons name="stick" />
+                <Icons
+                  class="mix-blend-difference"
+                  name="stick"
+                  color="white"
+                />
 
                 <h4 class="font-['Roboto'] flex items-center gap-2">
-                  <Icons name="views" color="white" />
+                  <Icons
+                    class="mix-blend-difference"
+                    name="views"
+                    color="white"
+                  />
 
                   <span>{{ data.item.views }}</span>
                 </h4>
@@ -78,7 +97,7 @@ const data = reactive({
 
 onMounted(() => {
   axios
-    .get(`http://192.168.100.48:3001/api/blog/${id}`)
+    .get(`http://10.10.2.22:3001/api/blog/${id}`)
     .then((res) => {
       data.item = res.data;
       data.loaded = true;
@@ -107,7 +126,7 @@ onMounted(() => {
     });
 
   axios
-    .get(`http://192.168.100.48:3001/api/blog`)
+    .get(`http://10.10.2.22:3001/api/blog`)
     .then((res) => {
       data.list = res.data;
     })
@@ -134,24 +153,4 @@ onMounted(() => {
 });
 </script>
 
-<style lang="scss" scoped>
-.bg-cover-color {
-  background: linear-gradient(
-    180deg,
-    #000000 -8.29%,
-    rgba(15, 5, 23, 0.65) 75.18%,
-    rgba(74, 25, 112, 0.55) 100%
-  );
-}
-
-@media (min-width: 1536px) {
-  .bg-cover-color {
-    background: linear-gradient(
-      90deg,
-      #000000 0%,
-      rgba(15, 5, 23, 0.65) 77.08%,
-      rgba(74, 25, 112, 0.25) 100%
-    );
-  }
-}
-</style>
+<style lang="scss" scoped></style>

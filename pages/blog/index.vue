@@ -1,14 +1,16 @@
 <template>
   <section id="blog">
     <Container>
-      <div class="bg-black my-5 py-20">
+      <div class="mt-5 py-20">
         <div class="2xl:flex 2xl:justify-between 2xl:items-center">
           <h1 class="font-['Roboto_Slab'] font-black text-8xl">
             <span>Blog</span>
           </h1>
 
           <div class="2xl:w-[220px]">
-            <h2 class="hidden 2xl:block text-xs text-right">
+            <h2
+              class="hidden 2xl:block text-xs text-right text-white mix-blend-difference"
+            >
               <span>
                 Want to save articles to read later? Add them to your reading
                 list.
@@ -16,18 +18,18 @@
             </h2>
 
             <button
-              class="hidden 2xl:flex w-full justify-center items-center my-5 py-1 bg-white rounded"
+              class="hidden 2xl:flex w-full justify-center items-center my-5 py-1 bg-white rounded mix-blend-difference"
             >
               <span class="text-black font-semibold text-sm">Login</span>
             </button>
 
             <div class="2xl:flex 2xl:justify-end mt-10 2xl:mt-0">
               <button
-                class="border border-white rounded py-3 px-5 flex gap-5 w-full 2xl:w-auto"
+                class="border border-white rounded py-3 px-5 flex gap-5 w-full 2xl:w-auto mix-blend-difference"
               >
                 <Icons name="bookmark" color="white" />
 
-                <span class="">My reading list</span>
+                <span class="text-white">My reading list</span>
               </button>
             </div>
           </div>
@@ -53,7 +55,7 @@ const data = reactive({
 
 onMounted(() => {
   axios
-    .get(`http://192.168.100.48:3001/api/blog`)
+    .get(`http://10.10.2.22:3001/api/blog`)
     .then((res) => {
       data.list = res.data;
     })

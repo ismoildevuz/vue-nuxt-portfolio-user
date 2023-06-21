@@ -1,14 +1,14 @@
 <template>
   <nuxt-link :to="`/blog/${el.id}`">
     <div
-      class="group border border-white hover:bg-white bg-black hover:text-black text-white rounded p-5"
+      class="group border border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black rounded p-5"
     >
       <div class="flex gap-5">
         <img
           width="100"
           height="100"
-          class="w-[100px] h-[100px] object-cover rounde"
-          :src="`http://192.168.100.48:3001/api/image/file/${el.image?.file_name}`"
+          class="w-[100px] h-[100px] object-cover rounded"
+          :src="`http://10.10.2.22:3001/api/image/file/${el.image?.file_name}`"
           onerror="this.src='/images/no-image-blog.png'"
         />
 
@@ -18,7 +18,7 @@
           <span>{{ el.title }}</span>
 
           <div
-            class="absolute w-full h-[150px] top-0 bg-gradient-to-t group-hover:from-white from-black to-[25%] to-transparent"
+            class="absolute w-full h-[150px] top-0 bg-gradient-to-t group-hover:from-black from-white dark:group-hover:from-white dark:from-black to-[25%] to-transparent"
           ></div>
         </h3>
       </div>
@@ -27,12 +27,12 @@
         <div class="flex gap-5">
           <h4 class="font-['Roboto'] flex items-center gap-2">
             <Icons
-              class="group-hover:hidden block"
+              class="group-hover:block hidden dark:group-hover:hidden dark:block"
               name="calendar"
               color="white"
             />
             <Icons
-              class="group-hover:block hidden"
+              class="group-hover:hidden block dark:group-hover:block dark:hidden"
               name="calendar"
               color="black"
             />
@@ -42,12 +42,12 @@
 
           <h4 class="font-['Roboto'] flex items-center gap-2">
             <Icons
-              class="group-hover:hidden block"
+              class="group-hover:block hidden dark:group-hover:hidden dark:block"
               name="views"
               color="white"
             />
             <Icons
-              class="group-hover:block hidden"
+              class="group-hover:hidden block dark:group-hover:block dark:hidden"
               name="views"
               color="black"
             />
@@ -58,12 +58,12 @@
 
         <button>
           <Icons
-            class="group-hover:hidden block"
+            class="group-hover:block hidden dark:group-hover:hidden dark:block"
             name="bookmark"
             color="white"
           />
           <Icons
-            class="group-hover:block hidden"
+            class="group-hover:hidden block dark:group-hover:block dark:hidden"
             name="bookmark"
             color="black"
           />

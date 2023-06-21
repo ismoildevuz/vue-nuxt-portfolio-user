@@ -9,7 +9,7 @@
     />
 
     <button class="bg-black px-4 py-2 rounded-full ml-4 text-white">
-      <span>Conctact</span>
+      <span>Contact</span>
     </button>
   </div>
 </template>

@@ -89,7 +89,7 @@ const next = () => {
 
 onMounted(() => {
   axios
-    .get(`http://192.168.100.48:3001/api/project`)
+    .get(`http://10.10.2.22:3001/api/project`)
     .then((res) => {
       data.list = res.data;
     })
