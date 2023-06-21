@@ -97,7 +97,7 @@ const data = reactive({
 
 onMounted(() => {
   axios
-    .get(`http://10.10.2.22:3001/api/blog/${id}`)
+    .get(`https://nest-portfolio-xy2i.onrender.com/api/blog/${id}`)
     .then((res) => {
       data.item = res.data;
       data.loaded = true;
@@ -126,7 +126,7 @@ onMounted(() => {
     });
 
   axios
-    .get(`http://10.10.2.22:3001/api/blog`)
+    .get(` https://nest-portfolio-xy2i.onrender.com/api/blog`)
     .then((res) => {
       data.list = res.data;
     })

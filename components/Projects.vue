@@ -89,7 +89,7 @@ const next = () => {
 
 onMounted(() => {
   axios
-    .get(`http://10.10.2.22:3001/api/project`)
+    .get(`https://nest-portfolio-xy2i.onrender.com/api/project`)
     .then((res) => {
       data.list = res.data;
     })

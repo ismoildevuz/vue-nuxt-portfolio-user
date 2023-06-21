@@ -52,7 +52,7 @@
       class="rounded-lg w-[360px] h-[240px] 2xl:w-[600px] 2xl:h-[400px] object-cover select-none"
       height="400"
       width="600"
-      :src="`http://10.10.2.22:3001/api/image/file/${el.image?.file_name}`"
+      :src="`https://nest-portfolio-xy2i.onrender.com/api/image/file/${el.image?.file_name}`"
       onerror="this.src='/images/project-1.png'"
       alt=""
     />
