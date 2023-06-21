@@ -70,7 +70,7 @@
             </div>
           </div>
 
-          <div class="2xl:w-[300px]">
+          <div class="2xl:w-[500px]">
             <RightSide :data="data.list" />
           </div>
         </div>
