@@ -19,29 +19,19 @@
             <span>Ongoing fullstack web developer</span>
           </h2>
 
-          <div
-            class=" mix-blend-difference w-min mx-auto my-5 border-2 px-8 p-2 rounded duration-200 text-black bg-white border-white hover:bg-black hover:text-white"
-          >
-            <a class="font-['Inter'] font-semibold" href="#contact">Contact</a>
+          <div class="mix-blend-difference w-min mx-auto my-7">
+            <a
+              class="font-['Inter'] font-semibold border-2 px-8 p-2 rounded duration-200 text-black bg-white border-white hover:bg-black hover:text-white"
+              href="#contact"
+              >Contact</a
+            >
           </div>
 
+          <SocialMedia />
+
           <div
-            class="w-min mx-auto flex items-center justify-center gap-5 py-5 mix-blend-difference"
+            class="w-min mx-auto mt-14 hidden 2xl:block mix-blend-difference"
           >
-            <a target="_blank" href="#" class="">
-              <Icons name="email" />
-            </a>
-
-            <a target="_blank" href="#" class="">
-              <Icons name="whatsapp" />
-            </a>
-
-            <a target="_blank" href="#" class="">
-              <Icons name="instagram" />
-            </a>
-          </div>
-
-          <div class="w-min mx-auto mt-14 hidden 2xl:block  mix-blend-difference">
             <div class="mb-5">
               <Icons name="mouse" />
             </div>

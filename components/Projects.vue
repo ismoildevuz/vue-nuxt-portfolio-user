@@ -15,7 +15,15 @@
 
           <div class="carousel overflow-hidden relative">
             <div
-              class="carousel-inner flex duration-300 transition-transform ease-in-out"
+              class="carousel-inner flex duration-300 transition-transform ease-in-out select-none cursor-grab"
+              @mousedown="startDrag"
+              @mousemove="handleDrag"
+              @mouseup="endDrag"
+              @mouseleave="endDrag"
+              @touchstart="handleTouchStart"
+              @touchmove="handleTouchMove"
+              @touchend="handleTouchEnd"
+              @touchcancel="handleTouchEnd"
             >
               <div
                 v-for="(el, ind) in data.list"
@@ -66,14 +74,44 @@ import axios from "axios";
 const data = reactive({
   list: [],
   current: 0,
+  timer: null,
+  drag: {
+    startX: 0,
+    currentX: 0,
+    isDragging: false,
+  },
 });
+
+let touchStartX = 0;
+let touchMoveX = 0;
+
+const handleTouchStart = (event) => {
+  touchStartX = event.touches[0].clientX;
+};
+
+const handleTouchMove = (event) => {
+  touchMoveX = event.touches[0].clientX;
+};
+
+const handleTouchEnd = () => {
+  const minSwipeDistance = 20;
+  const swipeDistance = touchStartX - touchMoveX;
+
+  if (Math.abs(swipeDistance) >= minSwipeDistance) {
+    if (swipeDistance > 0) {
+      next();
+    } else {
+      prev();
+    }
+  }
+};
 
 const prev = () => {
   if (data.current > 0) {
     data.current--;
-    document.querySelector(`.carousel-inner`).style.transform = `translateX(-${
-      data.current * 100
-    }%)`;
+    moveCarousel();
+    stopAutoSwipe();
+    startAutoSwipe();
   }
 };
 
@@ -81,17 +119,76 @@ const next = () => {
   const totalItems = data.list.length;
   if (data.current < totalItems - 1) {
     data.current++;
-    document.querySelector(`.carousel-inner`).style.transform = `translateX(-${
-      data.current * 100
-    }%)`;
+    moveCarousel();
+    stopAutoSwipe();
+    startAutoSwipe();
   }
 };
+
+const moveCarousel = () => {
+  const carouselInner = document.querySelector(".carousel-inner");
+  if (carouselInner) {
+    carouselInner.style.transform = `translateX(-${data.current * 100}%)`;
+  }
+};
+
+const startAutoSwipe = () => {
+  data.timer = setInterval(() => {
+    const totalItems = data.list.length;
+    if (data.current < totalItems - 1) {
+      data.current++;
+    } else {
+      data.current = 0;
+    }
+    moveCarousel();
+  }, 5000);
+};
+
+const stopAutoSwipe = () => {
+  clearInterval(data.timer);
+};
+
+const startDrag = (event) => {
+  data.drag.startX = event.clientX;
+  data.drag.currentX = data.drag.startX;
+  data.drag.isDragging = true;
+  stopAutoSwipe();
+};
+
+const handleDrag = (event) => {
+  if (data.drag.isDragging) {
+    data.drag.currentX = event.clientX;
+  }
+};
+
+const endDrag = () => {
+  if (data.drag.isDragging) {
+    data.drag.isDragging = false;
+    const dragDistance = data.drag.currentX - data.drag.startX;
+    const threshold = window.innerWidth / 25; // Adjust the threshold as needed
+    const totalItems = data.list.length;
+
+    if (dragDistance > threshold && data.current > 0) {
+      data.current--;
+    } else if (dragDistance < -threshold && data.current < totalItems - 1) {
+      data.current++;
+    }
+
+    moveCarousel();
+    startAutoSwipe();
+  }
+};
+
+onUnmounted(() => {
+  stopAutoSwipe();
+});
 
 onMounted(() => {
   axios
     .get(`https://nest-portfolio-xy2i.onrender.com/api/project`)
     .then((res) => {
       data.list = res.data;
+      startAutoSwipe();
     })
     .catch((error) => {
       const message = error?.response?.data?.message;

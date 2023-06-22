@@ -107,20 +107,8 @@
           </button>
         </div>
 
-        <div
-          class="flex justify-center items-center gap-10 mt-10 px-16 mix-blend-difference"
-        >
-          <a target="_blank" href="#" class="">
-            <Icons name="email" />
-          </a>
-
-          <a target="_blank" href="#" class="">
-            <Icons name="whatsapp" />
-          </a>
-
-          <a target="_blank" href="#" class="">
-            <Icons name="instagram" />
-          </a>
+        <div class="mt-10">
+          <SocialMedia />
         </div>
       </div>
     </Container>
