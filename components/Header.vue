@@ -120,7 +120,7 @@ const colorMode = useColorMode();
 
 const sideOpen = ref(false);
 
-const logoName = ref(`<>edu.</>`);
+const logoName = ref(`<>dev</>`);
 
 const navLinks = ref([
   {

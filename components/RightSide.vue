@@ -16,6 +16,7 @@
       </div>
 
       <button
+        @click="share"
         class="flex items-center justify-center gap-3 py-2 bg-white rounded-xl w-full mt-3 mix-blend-difference"
       >
         <Icons name="share" />
@@ -40,6 +41,32 @@
 
 <script setup>
 defineProps(["data"]);
+
+const share = () => {
+  const baseUrl = "https://vue-nuxt-portfolio-user.vercel.app";
+  const fullPath = useRoute().fullPath;
+  const res = baseUrl + fullPath;
+
+  if (document.queryCommandSupported("copy")) {
+    const tempInput = document.createElement("input");
+    tempInput.style.position = "fixed";
+    tempInput.style.opacity = 0;
+    tempInput.value = res;
+    document.body.appendChild(tempInput);
+    tempInput.focus();
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+
+    ElMessage({
+      message: "Link copied",
+      grouping: true,
+      type: "success",
+    });
+  } else {
+    console.log("Copying to clipboard is not supported in this browser.");
+  }
+};
 </script>
 
 <style lang="scss" scoped></style>
