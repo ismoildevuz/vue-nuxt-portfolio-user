@@ -10,12 +10,12 @@
 
         <button
           @click="sideOpen = !sideOpen"
-          class="2xl:hidden block mix-blend-difference"
+          class="sm:hidden block mix-blend-difference"
         >
           <Icons name="menu" />
         </button>
 
-        <div class="hidden 2xl:flex items-center gap-20">
+        <div class="hidden sm:flex items-center gap-20">
           <ul class="flex gap-10">
             <NavItem
               v-for="(el, ind) in navLinks"

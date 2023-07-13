@@ -16,12 +16,12 @@
           <span>Back to Blog page</span>
         </nuxt-link>
 
-        <div class="2xl:flex 2xl:justify-between 2xl:gap-10 mt-5">
+        <div class="sm:flex sm:justify-between sm:gap-10 mt-5">
           <div
             class="flex-grow border border-black dark:border-white rounded-xl overflow-hidden"
           >
             <div
-              class="p-10 border-b border-black dark:border-white dark:bg-gradient-to-t dark:2xl:bg-gradient-to-l dark:from-[rgba(114,39,176,0.25)] dark:from-0% dark:to-transparent"
+              class="p-10 border-b border-black dark:border-white dark:bg-gradient-to-t dark:sm:bg-gradient-to-l dark:from-[rgba(114,39,176,0.25)] dark:from-0% dark:to-transparent"
             >
               <div class="flex gap-3">
                 <h4 class="font-['Roboto'] flex items-center gap-2">
@@ -54,7 +54,7 @@
               </div>
 
               <h2
-                class="font-['Roboto_Slab'] font-black text-3xl 2xl:text-6xl leading-snug 2xl:w-[75%] mt-5"
+                class="font-['Roboto_Slab'] font-black text-3xl sm:text-6xl leading-snug sm:w-[75%] mt-5"
               >
                 <span>{{ data.item.title }}</span>
               </h2>
@@ -70,7 +70,7 @@
             </div>
           </div>
 
-          <div class="2xl:w-[500px]">
+          <div class="sm:w-[500px]">
             <RightSide :data="data.list" />
           </div>
         </div>

@@ -6,7 +6,7 @@
       <Icons name="email" />
     </a>
 
-    <a target="_blank" href="https://t.me/ismoil4433" class="">
+    <a target="_blank" href="https://t.me/ismoil4432" class="">
       <Icons name="telegram" />
     </a>
 

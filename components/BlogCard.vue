@@ -13,7 +13,7 @@
         />
 
         <h3
-          class="text-2xl 2xl:text-3xl 2xl:w-[70%] h-[150px] overflow-hidden relative"
+          class="text-2xl sm:text-3xl sm:w-[70%] h-[150px] overflow-hidden relative"
         >
           <span>{{ el.title }}</span>
 

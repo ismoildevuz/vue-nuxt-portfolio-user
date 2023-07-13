@@ -2,14 +2,14 @@
   <section id="blog">
     <Container>
       <div class="mt-5 py-20">
-        <div class="2xl:flex 2xl:justify-between 2xl:items-center">
+        <div class="sm:flex sm:justify-between sm:items-center">
           <h1 class="font-['Roboto_Slab'] font-black text-8xl">
             <span>Blog</span>
           </h1>
 
-          <div class="2xl:w-[220px]">
+          <div class="sm:w-[220px]">
             <h2
-              class="hidden 2xl:block text-xs text-right text-white mix-blend-difference"
+              class="hidden sm:block text-xs text-right text-white mix-blend-difference"
             >
               <span>
                 Want to save articles to read later? Add them to your reading
@@ -18,14 +18,14 @@
             </h2>
 
             <button
-              class="hidden 2xl:flex w-full justify-center items-center my-5 py-1 bg-white rounded mix-blend-difference"
+              class="hidden sm:flex w-full justify-center items-center my-5 py-1 bg-white rounded mix-blend-difference"
             >
               <span class="text-black font-semibold text-sm">Login</span>
             </button>
 
-            <div class="2xl:flex 2xl:justify-end mt-10 2xl:mt-0">
+            <div class="sm:flex sm:justify-end mt-10 sm:mt-0">
               <button
-                class="border border-white rounded py-3 px-5 flex gap-5 w-full 2xl:w-auto mix-blend-difference"
+                class="border border-white rounded py-3 px-5 flex gap-5 w-full sm:w-auto mix-blend-difference"
               >
                 <Icons name="bookmark" color="white" />
 
@@ -35,7 +35,7 @@
           </div>
         </div>
 
-        <div class="grid 2xl:grid-cols-3 gap-10 my-10 2xl:my-20">
+        <div class="grid sm:grid-cols-3 gap-10 my-10 sm:my-20">
           <div v-for="(el, ind) in data.list" :key="ind">
             <BlogCard :el="el" />
           </div>

@@ -8,7 +8,7 @@
           Projects
         </h2>
 
-        <div class="my-10 2xl:px-20 relative">
+        <div class="my-10 sm:px-20 relative">
           <div
             class="hidden dark:block bg-cover-color -left-0 absolute w-full h-full bg-transparent"
           ></div>
@@ -214,7 +214,7 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-@media (min-width: 1536px) {
+@media (min-width: 640px) {
   .bg-cover-color {
     background: linear-gradient(
       90deg,

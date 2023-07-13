@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full mt-5 2xl:mt-0">
+  <div class="w-full mt-5 sm:mt-0">
     <div class="border border-black dark:border-white rounded-xl p-5">
       <div class="flex justify-between gap-2 mix-blend-difference">
         <button

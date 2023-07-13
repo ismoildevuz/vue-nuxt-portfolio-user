@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-[800px] 2xl:h-[400px] flex flex-col 2xl:flex-row items-center justify-between"
+    class="h-[800px] sm:h-[600px] md:h-[550px] lg:h-[400px] xl:h-[450px] 2xl:h-[450px] flex flex-col sm:flex-row items-center justify-between"
   >
     <div class="font-['Roboto_Slab'] my-5 mr-5">
       <p class="flex gap-2 mb-5">
@@ -21,11 +21,13 @@
         <span>Finished</span>
       </p>
 
-      <h3 class="text-4xl font-black mb-5">
+      <h3
+        class="text-4xl md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-black mb-5"
+      >
         <span>{{ el.name }} </span>
       </h3>
 
-      <h4 class="text-xl mb-8">
+      <h4 class="text-xl md:text-sm lg:text-md xl:text-lg 2xl:text-xl mb-8">
         <span>
           {{ el.description }}
         </span>
@@ -51,7 +53,7 @@
     </div>
 
     <img
-      class="rounded-lg w-[340px] h-[200px] 2xl:w-[600px] 2xl:h-[400px] object-cover select-none pointer-events-none"
+      class="rounded-lg w-[340px] h-[200px] sm:w-[360px] sm:h-[240px] md:w-[420px] md:h-[280px] lg:w-[480px] lg:h-[320px] xl:w-[540px] xl:h-[360px] 2xl:w-[600px] 2xl:h-[400px] object-cover select-none pointer-events-none"
       :src="`https://nest-portfolio-xy2i.onrender.com/api/image/file/${el.image?.file_name}`"
       onerror="this.src='/images/project-1.png'"
       alt=""

@@ -1,7 +1,7 @@
 <template>
   <form
     @submit.prevent
-    class="bg-white rounded-3xl 2xl:rounded-full overflow-hidden border border-black p-2 mt-10 mb-24 2xl:flex 2xl:justify-between w-full"
+    class="bg-white rounded-3xl sm:rounded-full overflow-hidden border border-black p-2 mt-10 mb-24 sm:flex sm:justify-between w-full"
   >
     <input
       type="email"
