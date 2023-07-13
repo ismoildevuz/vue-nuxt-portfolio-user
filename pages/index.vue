@@ -7,13 +7,13 @@
 
 <script setup>
 useSeoMeta({
-  title: "Ismoil Abdurahmonov || Full-Stack developer",
-  ogTitle: "Ismoil Abdurahmonov || Frontend Vuejs developer",
-  ogTitle: "Ismoil Abdurahmonov || Frontend Vuejs developer",
+  title: "Ismoil Abdurahmonov || Full Stack developer, Nest.js + Vue.js",
+  ogTitle: "Ismoil Abdurahmonov || Frontend Vue.js developer",
+  ogTitle: "Ismoil Abdurahmonov || Backend Nest.js developer",
   description:
-    "Ismoil Abdurahmonov Fullstack developer focused on creating Websites and Web applications. I really like different projects that solve real problems.",
+    "Ismoil Abdurahmonov - Fullstack developer focused on creating Websites and Web applications. I really like different projects that solve real problems.",
   ogDescription:
-    "I'm Abbos, I'm 18 years old and I live in Uzbekistan, Tashkent. Fullstack developer",
+    "I'm Ismoil, I'm 18 years old and I live in Uzbekistan, Tashkent. Full Stack developer",
   ogImage: "https://vue-nuxt-portfolio-user.vercel.app/favicon.ico",
 });
 </script>
