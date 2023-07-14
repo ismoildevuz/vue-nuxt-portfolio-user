@@ -43,7 +43,7 @@
 defineProps(["data"]);
 
 const share = () => {
-  const baseUrl = "https://vue-nuxt-portfolio-user.vercel.app";
+  const baseUrl = "https://www.ismoildev.uz";
   const fullPath = useRoute().fullPath;
   const res = baseUrl + fullPath;
 
