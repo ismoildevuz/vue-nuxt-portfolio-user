@@ -8,7 +8,7 @@
           width="100"
           height="100"
           class="w-[100px] h-[100px] object-cover rounded"
-          :src="`https://nest-portfolio-xy2i.onrender.com/api/image/${el.image_name}`"
+          :src="`https://nest-portfolio-voa5.onrender.com/api/image/${el.image_name}`"
           onerror="this.src='/images/no-image-blog.png'"
         />
 
