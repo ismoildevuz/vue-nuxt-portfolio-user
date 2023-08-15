@@ -55,7 +55,7 @@ const data = reactive({
 
 onMounted(() => {
   axios
-    .get(`https://nest-portfolio-voa5.onrender.com/api/blog`)
+    .get(`https://nest-portfolio-xy2i.onrender.com/api/blog`)
     .then((res) => {
       data.list = res.data;
     })

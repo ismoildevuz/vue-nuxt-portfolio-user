@@ -54,7 +54,7 @@
 
     <img
       class="rounded-lg w-[340px] h-[200px] sm:w-[360px] sm:h-[240px] md:w-[420px] md:h-[280px] lg:w-[480px] lg:h-[320px] xl:w-[540px] xl:h-[360px] 2xl:w-[600px] 2xl:h-[400px] object-cover select-none pointer-events-none"
-      :src="`https://nest-portfolio-voa5.onrender.com/api/image/${el.image_name}`"
+      :src="`https://nest-portfolio-xy2i.onrender.com/api/image/${el.image_name}`"
       onerror="this.src='/images/project-1.png'"
       alt=""
     />

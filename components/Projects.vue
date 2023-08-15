@@ -185,7 +185,7 @@ onUnmounted(() => {
 
 onMounted(() => {
   axios
-    .get(`https://nest-portfolio-voa5.onrender.com/api/project`)
+    .get(`https://nest-portfolio-xy2i.onrender.com/api/project`)
     .then((res) => {
       data.list = res.data;
       startAutoSwipe();
